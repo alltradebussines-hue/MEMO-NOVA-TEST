@@ -23,6 +23,7 @@ COSA INCLUDE
 ------------
 • Registrazione audio e trascrizione, nei limiti delle funzioni offerte da Chrome e dal telefono.
 • Note, checklist, completamento touch, lettura delle attività aperte.
+• Agenda filtrabile per oggi, domani, settimana e mese; date e orari semplici dettati (es. “domani chiama Giordano alle 9”).
 • Foto allegate, voce Memo/Marta, promemoria locali e esportazione del diario.
 • Interfaccia memorizzata per uso offline dopo la prima visita; alcune funzioni vocali richiedono rete o dipendono dal browser.
 

@@ -4,7 +4,7 @@
 
 - Registrazione dal microfono con `MediaRecorder` e salvataggio del file audio quando si salva la nota.
 - Trascrizione italiana tramite Web Speech API, se disponibile nel browser. La registrazione audio resta disponibile anche senza trascrizione.
-- Scomposizione semplice delle frasi in attività, checklist touch, filtri e lettura delle sole attività aperte.
+- Scomposizione delle frasi in attività, checklist touch, filtri, lettura delle attività aperte e agenda per oggi, domani, settimana e mese. Riconosce date e orari semplici come “domani chiama Giordano alle 9”, crea un impegno per domani alle 09:00 e mostra le attività ordinate nell’agenda.
 - Dati salvati in `localStorage` e diario esportabile come `diario_idee.txt`.
 - Assistente in primo piano chiamabile “Memo” o con un alias modificabile (predefinito “Marta”), con voce italiana disponibile sul dispositivo, velocità, tono e stile regolabili.
 - Domande scritte o vocali semplici: lettura delle attività aperte e comando “fatta” per completare la prima attività aperta.
@@ -60,3 +60,34 @@ Per renderlo utile senza fingere di essere onnisciente, separare le competenze i
 Per le conversazioni di supporto, usare tecniche ispirate al colloquio motivazionale: domande aperte, ascolto riflessivo, rinforzo realistico degli sforzi, riepilogo e rispetto dell'autonomia. Questi sono principi di comunicazione, non una certificazione psicologica. L'assistente deve presentarsi come AI; non diagnostica, non prescrive e indirizza a professionisti per questioni cliniche o urgenti. Riferimenti professionali: [APA Dictionary of Psychology](https://dictionary.apa.org/motivational-interviewing), [American Academy of Pediatrics](https://www.aap.org/en/patient-care/healthy-active-living-for-families/communicating-with-families/motivational-interviewing/).
 
 L'architettura per l'evoluzione: PWA/interfaccia separata da un nucleo di pianificazione e da moduli API sostituibili. I dati personali restano locali finché non si implementa e si autorizza la sincronizzazione. Il backend servirà solo dove necessario per funzioni condivise o integrazioni; nessuna chiave API privata va inserita nel codice frontend.
+
+
+## Roadmap completa di Memo Nova
+
+Questa sezione raccoglie le funzioni concordate per il progetto. Le voci “successive” sono requisiti approvati per lo sviluppo, non funzioni già disponibili nel prototipo PWA.
+
+### Nucleo dell’assistente
+- Cattura di idee in testo, voce e foto; salvataggio cronologico con checklist modificabile e completamento manuale o vocale.
+- Conversione delle frasi in attività, riconoscimento di giorno, data e orario, agenda per oggi, domani, settimana e mese, ricerca degli impegni per domanda vocale o scritta.
+- Promemoria delle attività lasciate aperte, risposta “fatta”, rimando a domani, settimana prossima, mese successivo o data scelta, con eventi esportabili al calendario.
+- Progetti, hobby e missioni personali con obiettivi, prossimi passi e suggerimenti del tutor quando rimane tempo libero.
+- Diario locale con esportazione, allegati audio e foto; autenticazione Google e sincronizzazione da progettare come opzione, senza inviare dati al cloud senza consenso.
+
+### Tutor Nova
+- Nome Memo e alias personalizzabile, voce disponibile sul dispositivo, velocità, tono e stile; guida animata con esempi brevi, scorciatoie e consigli sull’uso.
+- Tono competente, cordiale, discreto e umano, con umorismo misurato e correzioni gentili. Le funzioni di supporto emotivo usano comunicazione non giudicante; Nova non è una psicologa o un medico e non fa diagnosi.
+- Calcoli pratici, preventivi di spesa e totali da liste dettate, con distinzione chiara tra importi inseriti dall’utente e stime di mercato.
+- Aiuto con foto di articoli, descrizione e ricerca di mercato; meteo, attrezzatura, preparazione bagagli, mappe, traffico, incidenti e distributori richiedono fonti aggiornate e consenso per posizione e dati del veicolo.
+
+### Accesso rapido e piattaforme
+- Priorità Android: pulsante grande, widget, scorciatoie dell’icona, riquadro Impostazioni rapide e azioni nella notifica. Sul HONOR Magic V3 si verifica l’eventuale Avvio rapido del tasto Volume giù; doppio tasto di accensione, tasti laterali a schermo bloccato e avvio del microfono in background dipendono dalle funzioni consentite da MagicOS e Android.
+- Fotocamera da accesso rapido, poi domanda se allegare la foto a un promemoria o usarla per una ricerca.
+- Versione iOS futura con interfaccia e modello dati condivisi, adattando separatamente microfono, fotocamera, notifiche, widget e scorciatoie alle regole Apple.
+- Due spazi pubblicitari piccoli e discreti, disattivati nel prototipo; non devono interrompere audio, cattura, checklist o promemoria.
+
+### Sviluppo previsto
+1. Rendere affidabili cattura audio e trascrizione sul Magic V3, agenda e gestione locale dei dati.
+2. Realizzare l’app Android nativa con accessi rapidi, widget, notifiche di sistema e salvataggio audio persistente.
+3. Aggiungere account Google e sincronizzazione facoltativa dopo aver definito privacy, backup e recupero dei dati.
+4. Integrare gradualmente calendario, meteo, ricerca, mappe, traffico e stime con fonti esplicite e costi controllati.
+5. Preparare la versione iOS e valutare annunci solo dopo i test d’uso.
