@@ -1,0 +1,37 @@
+MEMO NOVA — PROTOTIPO INSTALLABILE SU ANDROID
+==============================================
+
+Questa è una PWA: si installa dalla pagina web e appare come un'app sul telefono. NON è un APK e non si installa aprendo lo ZIP. Il prototipo è gratuito e non richiede un account Memo Nova.
+
+COME INSTALLARLA GRATIS SUL TUO HONOR MAGIC V3
+----------------------------------------------
+Serve prima pubblicare i file su un indirizzo HTTPS. Questo pacchetto non contiene note o registrazioni personali.
+
+1) Sul computer, estrai Memo-Nova-Android-Test.zip.
+2) Crea un repository pubblico su GitHub (New repository), ad esempio memo-nova-test.
+3) Carica nel repository tutti i file che trovi dentro la cartella idea-al-volo: index.html, app.js, tutor.js, manifest.webmanifest, sw.js, icone e gli altri file.
+4) Nel repository apri Settings → Pages. In “Build and deployment” seleziona “Deploy from a branch”, branch “main”, cartella “/(root)” e salva.
+5) Quando GitHub Pages mostra l'indirizzo HTTPS, aprilo sul Magic V3 con Chrome.
+6) Tocca ⋮ → “Installa app” (oppure “Aggiungi a schermata Home”) e conferma. Concedi il microfono quando richiesto.
+7) Apri Memo Nova dalla nuova icona e prova una nota breve. Per invitarci gli amici, invia loro su WhatsApp lo stesso indirizzo HTTPS.
+
+ACCESSO RAPIDO SUL MAGIC V3
+---------------------------
+Memo Nova è una PWA e non può assegnarsi da sola i tasti Volume/Accensione. In Impostazioni → Funzioni di accessibilità → Scorciatoie e gesti → Avvio rapido, usa la doppia pressione di Volume giù solo se MagicOS mostra Memo Nova tra le azioni/app selezionabili. Se non compare, usa l'icona Memo Nova o aggiungi il collegamento alla schermata esterna e principale. Il tasto di accensione non è rimappabile liberamente da questa versione.
+
+COSA INCLUDE
+------------
+• Registrazione audio e trascrizione, nei limiti delle funzioni offerte da Chrome e dal telefono.
+• Note, checklist, completamento touch, lettura delle attività aperte.
+• Foto allegate, voce Memo/Marta, promemoria locali e esportazione del diario.
+• Interfaccia memorizzata per uso offline dopo la prima visita; alcune funzioni vocali richiedono rete o dipendono dal browser.
+
+LIMITI DA SAPERE
+----------------
+• I dati sono salvati nel browser di ciascun telefono: non sono sincronizzati tra amici o dispositivi.
+• L'audio e la trascrizione sono funzioni dipendenti dal browser; la trascrizione può richiedere connessione.
+• Le notifiche web non sono affidabili a browser chiuso come quelle di un'app nativa.
+• Non include APK, widget Android nativo, registrazione a telefono bloccato o avvio tramite tasti hardware garantito.
+• La pubblicazione GitHub Pages è pubblica: chiunque abbia il link può aprire l'app. Non inserire nel repository dati personali; le note restano nel browser locale.
+
+Per le istruzioni tecniche e la predisposizione futura iOS, leggere README.md.
